@@ -13,7 +13,7 @@ Also, no attempt yet has been made to integrate this library with clojurescript'
 
 ## How to use `blueprint-cljs`
 
-In your project.clj file, include the dependency `[org.clojars.drcode/blueprint-cljs "0.1.1"]`
+In your project.clj file, include the dependency `[org.clojars.drcode/blueprint-cljs "0.1.1-SNAPSHOT"]`
 
 *Step 1: Make sure you are using Om with "Batteries Included"*
 
