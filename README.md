@@ -69,7 +69,7 @@ If someone is more competent than me at javascript build tools and clojurescript
 
 ## Unfortunate Hack #1
 
-Blueprintjs has a dependency on the React and ReactDOM NPM packages. However, Om loads its own instance of React and React does not play nice when double loaded. Thanks to pointers from António Monteiro, I was able to use the "package excise" feature to surgically remove these packages from the final blueprint bundle.
+Blueprintjs has a dependency on the React and ReactDOM NPM packages. However, Om loads its own instance of React and React does not play nice when double loaded. Thanks to pointers from António Monteiro, I was able to use the browserify "package excise" feature to surgically remove these packages from the final blueprint bundle.
 
 ## Horrible Hack #1
 
