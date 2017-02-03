@@ -1,8 +1,10 @@
 # Om Bindings for Palantir's Blueprintjs Library
 
-See a demo for this library (here)[http://lisperati.com/blueprint_cljs]
+Demo for this library [here](http://lisperati.com/blueprint)
 
-Palantir's (Blueprintjs)[http://blueprintjs.com/] is a React-compatible library of components optimized for desktop web applications. This library allows Blueprint to be used from Om and OmNext. Note that it is still alpha, which means:
+Palantir's [Blueprintjs](http://blueprintjs.com/) is a React-compatible library of components optimized for desktop web applications. In my opinion, it is a perfect companion for the Clojurescript Om framework.
+
+This `blueprint-cljs` library allows Blueprintjs to be used from Om and OmNext. Note that it is still alpha, which means:
 
 1. It likely won't work with clojurescript advanced compilation
 2. It has a couple of ugly hacks (detailed below) that you likely wouldn't want in a production application.

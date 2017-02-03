@@ -2147,3 +2147,79 @@ Compiling target/figwheel_temp/dev/figwheel/connect.cljs
 Copying file:/Users/conradbarski/blueprint-cljs/examples/kitchensink/src/kitchensink/core.cljs to resources/public/js/kitchensink/core.cljs
 notifying browser that file changed:  out/kitchensink/core.js
 [32mSuccessfully compiled "resources/public/js/main.js" in 0.993 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling src/kitchensink/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+Copying file:/Users/conradbarski/blueprint-cljs/examples/kitchensink/src/kitchensink/core.cljs to resources/public/js/kitchensink/core.cljs
+notifying browser that file changed:  out/kitchensink/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.518 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling src/kitchensink/core.cljs
+[31mCompiling "resources/public/js/main.js" failed.
+[0mANALYSIS ERROR: No such namespace: blueprint.core, could not locate blueprint/core.cljs, blueprint/core.cljc, or Closure namespace "blueprint.core" in file src/kitchensink/core.cljs on file null, line null, column null
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.369 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Copying jar:file:/Users/conradbarski/.m2/repository/org/clojars/drcode/blueprint-cljs/0.1.1-SNAPSHOT/blueprint-cljs-0.1.1-SNAPSHOT.jar!/blueprint_cljs/core.cljs to resources/public/js/blueprint_cljs/core.cljs
+Compiling resources/public/js/blueprint_cljs/core.cljs
+Compiling /Users/conradbarski/blueprint-cljs/examples/kitchensink/src/kitchensink/core.cljs
+Reading analysis cache for jar:file:/Users/conradbarski/.m2/repository/org/omcljs/om/1.0.0-addonsalpha48-SNAPSHOT/om-1.0.0-addonsalpha48-SNAPSHOT.jar!/om/next/cache.cljs
+Reading analysis cache for jar:file:/Users/conradbarski/.m2/repository/org/clojure/clojurescript/1.9.229/clojurescript-1.9.229.jar!/clojure/zip.cljs
+Reading analysis cache for jar:file:/Users/conradbarski/.m2/repository/org/clojure/clojurescript/1.9.229/clojurescript-1.9.229.jar!/clojure/set.cljs
+Reading analysis cache for jar:file:/Users/conradbarski/.m2/repository/org/omcljs/om/1.0.0-addonsalpha48-SNAPSHOT/om-1.0.0-addonsalpha48-SNAPSHOT.jar!/om/next/impl/parser.cljc
+Reading analysis cache for jar:file:/Users/conradbarski/.m2/repository/org/clojure/clojurescript/1.9.229/clojurescript-1.9.229.jar!/cljs/env.cljc
+Reading analysis cache for jar:file:/Users/conradbarski/.m2/repository/org/clojure/tools.reader/1.0.0-beta3/tools.reader-1.0.0-beta3.jar!/cljs/tools/reader/impl/utils.cljs
+Reading analysis cache for jar:file:/Users/conradbarski/.m2/repository/org/clojure/tools.reader/1.0.0-beta3/tools.reader-1.0.0-beta3.jar!/cljs/tools/reader/reader_types.cljs
+Reading analysis cache for jar:file:/Users/conradbarski/.m2/repository/org/clojure/tools.reader/1.0.0-beta3/tools.reader-1.0.0-beta3.jar!/cljs/tools/reader/impl/commons.cljs
+Reading analysis cache for jar:file:/Users/conradbarski/.m2/repository/org/clojure/tools.reader/1.0.0-beta3/tools.reader-1.0.0-beta3.jar!/cljs/tools/reader.cljs
+Reading analysis cache for jar:file:/Users/conradbarski/.m2/repository/org/clojure/clojurescript/1.9.229/clojurescript-1.9.229.jar!/cljs/reader.cljs
+Reading analysis cache for jar:file:/Users/conradbarski/.m2/repository/org/clojure/clojurescript/1.9.229/clojurescript-1.9.229.jar!/cljs/tagged_literals.cljc
+Reading analysis cache for jar:file:/Users/conradbarski/.m2/repository/org/clojure/clojurescript/1.9.229/clojurescript-1.9.229.jar!/cljs/analyzer.cljc
+Reading analysis cache for jar:file:/Users/conradbarski/.m2/repository/org/clojure/clojurescript/1.9.229/clojurescript-1.9.229.jar!/cljs/analyzer/api.cljc
+Reading analysis cache for jar:file:/Users/conradbarski/.m2/repository/org/omcljs/om/1.0.0-addonsalpha48-SNAPSHOT/om-1.0.0-addonsalpha48-SNAPSHOT.jar!/om/next/protocols.cljc
+Reading analysis cache for jar:file:/Users/conradbarski/.m2/repository/org/omcljs/om/1.0.0-addonsalpha48-SNAPSHOT/om-1.0.0-addonsalpha48-SNAPSHOT.jar!/om/tempid.cljc
+Reading analysis cache for jar:file:/Users/conradbarski/.m2/repository/com/cognitect/transit-cljs/0.8.239/transit-cljs-0.8.239.jar!/cognitect/transit.cljs
+Reading analysis cache for jar:file:/Users/conradbarski/.m2/repository/org/omcljs/om/1.0.0-addonsalpha48-SNAPSHOT/om-1.0.0-addonsalpha48-SNAPSHOT.jar!/om/transit.cljc
+Reading analysis cache for jar:file:/Users/conradbarski/.m2/repository/org/omcljs/om/1.0.0-addonsalpha48-SNAPSHOT/om-1.0.0-addonsalpha48-SNAPSHOT.jar!/om/next.cljc
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+Reading analysis cache for jar:file:/Users/conradbarski/.m2/repository/org/clojure/core.async/0.2.371/core.async-0.2.371.jar!/cljs/core/async/impl/protocols.cljs
+Reading analysis cache for jar:file:/Users/conradbarski/.m2/repository/org/clojure/core.async/0.2.371/core.async-0.2.371.jar!/cljs/core/async/impl/buffers.cljs
+Reading analysis cache for jar:file:/Users/conradbarski/.m2/repository/org/clojure/core.async/0.2.371/core.async-0.2.371.jar!/cljs/core/async/impl/dispatch.cljs
+Reading analysis cache for jar:file:/Users/conradbarski/.m2/repository/org/clojure/core.async/0.2.371/core.async-0.2.371.jar!/cljs/core/async/impl/channels.cljs
+Reading analysis cache for jar:file:/Users/conradbarski/.m2/repository/org/clojure/core.async/0.2.371/core.async-0.2.371.jar!/cljs/core/async/impl/ioc_helpers.cljs
+Reading analysis cache for jar:file:/Users/conradbarski/.m2/repository/org/clojure/core.async/0.2.371/core.async-0.2.371.jar!/cljs/core/async/impl/timers.cljs
+Reading analysis cache for jar:file:/Users/conradbarski/.m2/repository/org/clojure/core.async/0.2.371/core.async-0.2.371.jar!/cljs/core/async.cljs
+Reading analysis cache for jar:file:/Users/conradbarski/.m2/repository/figwheel/figwheel/0.5.0-SNAPSHOT/figwheel-0.5.0-SNAPSHOT.jar!/figwheel/client/utils.cljs
+Reading analysis cache for jar:file:/Users/conradbarski/.m2/repository/figwheel/figwheel/0.5.0-SNAPSHOT/figwheel-0.5.0-SNAPSHOT.jar!/figwheel/client/file_reloading.cljs
+Reading analysis cache for jar:file:/Users/conradbarski/.m2/repository/figwheel/figwheel/0.5.0-SNAPSHOT/figwheel-0.5.0-SNAPSHOT.jar!/figwheel/client/socket.cljs
+Reading analysis cache for jar:file:/Users/conradbarski/.m2/repository/figwheel/figwheel/0.5.0-SNAPSHOT/figwheel-0.5.0-SNAPSHOT.jar!/figwheel/client/heads_up.cljs
+Reading analysis cache for jar:file:/Users/conradbarski/.m2/repository/figwheel/figwheel/0.5.0-SNAPSHOT/figwheel-0.5.0-SNAPSHOT.jar!/figwheel/client.cljs
+Copying file:/Users/conradbarski/blueprint-cljs/examples/kitchensink/src/kitchensink/core.cljs to resources/public/js/kitchensink/core.cljs
+Copying file:/Users/conradbarski/blueprint-cljs/examples/kitchensink/target/figwheel_temp/dev/figwheel/connect.cljs to resources/public/js/figwheel/connect.cljs
+notifying browser that file changed:  resources/public/js/goog/deps.js
+notifying browser that file changed:  resources/public/js/cljs_deps.js
+notifying browser that file changed:  out/kitchensink/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 2.677 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling /Users/conradbarski/blueprint-cljs/examples/kitchensink/src/kitchensink/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+Copying file:/Users/conradbarski/blueprint-cljs/examples/kitchensink/src/kitchensink/core.cljs to resources/public/js/kitchensink/core.cljs
+notifying browser that file changed:  out/kitchensink/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.52 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling /Users/conradbarski/blueprint-cljs/examples/kitchensink/src/kitchensink/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+Copying file:/Users/conradbarski/blueprint-cljs/examples/kitchensink/src/kitchensink/core.cljs to resources/public/js/kitchensink/core.cljs
+notifying browser that file changed:  out/kitchensink/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.587 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling /Users/conradbarski/blueprint-cljs/examples/kitchensink/src/kitchensink/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+Copying file:/Users/conradbarski/blueprint-cljs/examples/kitchensink/src/kitchensink/core.cljs to resources/public/js/kitchensink/core.cljs
+notifying browser that file changed:  out/kitchensink/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.433 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling /Users/conradbarski/blueprint-cljs/examples/kitchensink/src/kitchensink/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+Copying file:/Users/conradbarski/blueprint-cljs/examples/kitchensink/src/kitchensink/core.cljs to resources/public/js/kitchensink/core.cljs
+notifying browser that file changed:  out/kitchensink/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.521 seconds.[0m

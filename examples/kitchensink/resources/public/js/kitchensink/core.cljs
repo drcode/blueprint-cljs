@@ -2,7 +2,7 @@
   (:require [goog.dom :as gdom]
             [om.next :as om :refer-macros [defui]]
             [om-tools.dom :as dom]
-            [kitchensink.blueprint :as bp]))
+            [blueprint-cljs.core :as bp]))
 
 (enable-console-print!)
 
@@ -36,7 +36,7 @@
                                        (dom/div {:class "pt-navbar-group pt-align-right"}
                                                 (dom/a {:href "https://github.com/drcode/blueprint-cljs"} (bp/button {:icon-name "home" :class "pt-minimal"
                                                               :intent (bp/intents :primary)} "Github"))
-                                                (dom/a {:href "https://github.com/drcode/blueprint-cljs"} (bp/button {:icon-name "pt-icon-document-open" :class "pt-minimal"} "Code for this page"))))
+                                                (dom/a {:href "https://github.com/drcode/blueprint-cljs/blob/master/examples/kitchensink/src/kitchensink/core.cljs"} (bp/button {:icon-name "pt-icon-document-open" :class "pt-minimal"} "Code for this page"))))
                               (dom/div {:style {:display "flex"
                                                 :justify-content "center"}}
                                        (dom/div {:style {:width "800px" :background-color (if (enabled? :dark)
@@ -45,7 +45,7 @@
                                                          :padding          "3em"}}
 
                                                 
-                                                (section "Click on stuff for animations & stuff. Example source here: " (dom/a {:href "todo"} "todo"))
+                                                (section "Click on things for animations & stuff. " (dom/i "This demo page is intended for desktop browsers only."))
                                                 (section (bp/switch {:on-click (toggle :dark)} "Turn off the lights!"))
                                                 
                                                 (section (bp/button {:on-click (toggle :alert)}
@@ -60,7 +60,7 @@
 
                                                 (section (bp/button {:on-click (fn []
                                                                                  (.show my-toaster #js {:intent (:danger bp/intents)
-                                                                                                        :message "This is a very dangerous button. Do not press it again." } ))} "Toast"))
+                                                                                                        :message "This is a very dangerous button. Do not press it again." } ))} "Toast (Press multiple times)"))
                                                 
                                                 (section (bp/button {:on-click (toggle :dialog)}
                                                                     "Show Dialog"))

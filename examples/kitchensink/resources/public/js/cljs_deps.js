@@ -6,7 +6,6 @@ goog.addDependency("../om/util.js", ['om.util'], ['cljs.core']);
 goog.addDependency("../om/dom.js", ['om.dom'], ['cljs.core', 'goog.object', 'cljsjs.react', 'cljsjs.react.dom', 'om.util']);
 goog.addDependency("../clojure/string.js", ['clojure.string'], ['goog.string', 'cljs.core', 'goog.string.StringBuffer']);
 goog.addDependency("../om_tools/dom.js", ['om_tools.dom'], ['cljs.core', 'om.dom', 'clojure.string']);
-goog.addDependency("../kitchensink/blueprint.js", ['kitchensink.blueprint'], ['om_tools.dom', 'cljs.core']);
 goog.addDependency("../om/next/cache.js", ['om.next.cache'], ['cljs.core']);
 goog.addDependency("../clojure/zip.js", ['clojure.zip'], ['cljs.core']);
 goog.addDependency("../clojure/set.js", ['clojure.set'], ['cljs.core']);
@@ -35,7 +34,8 @@ goog.addDependency("../com/cognitect/transit.js", ['com.cognitect.transit'], ['c
 goog.addDependency("../cognitect/transit.js", ['cognitect.transit'], ['com.cognitect.transit.eq', 'cljs.core', 'com.cognitect.transit.types', 'com.cognitect.transit', 'goog.math.Long']);
 goog.addDependency("../om/transit.js", ['om.transit'], ['cljs.core', 'cognitect.transit', 'om.tempid', 'com.cognitect.transit']);
 goog.addDependency("../om/next.js", ['om.next'], ['om.next.cache', 'clojure.zip', 'om.next.impl.parser', 'goog.string', 'goog.debug.Console', 'cljs.core', 'goog.object', 'cljs.analyzer.api', 'goog.log', 'om.next.protocols', 'om.tempid', 'cljs.analyzer', 'clojure.string', 'om.transit', 'om.util']);
-goog.addDependency("../kitchensink/core.js", ['kitchensink.core'], ['goog.dom', 'om_tools.dom', 'cljs.core', 'kitchensink.blueprint', 'om.next']);
+goog.addDependency("../blueprint_cljs/core.js", ['blueprint_cljs.core'], ['om_tools.dom', 'cljs.core']);
+goog.addDependency("../kitchensink/core.js", ['kitchensink.core'], ['goog.dom', 'om_tools.dom', 'cljs.core', 'om.next', 'blueprint_cljs.core']);
 goog.addDependency("../cljs/core/async/impl/protocols.js", ['cljs.core.async.impl.protocols'], ['cljs.core']);
 goog.addDependency("../cljs/core/async/impl/buffers.js", ['cljs.core.async.impl.buffers'], ['cljs.core', 'cljs.core.async.impl.protocols']);
 goog.addDependency("../cljs/core/async/impl/dispatch.js", ['cljs.core.async.impl.dispatch'], ['cljs.core', 'cljs.core.async.impl.buffers', 'goog.async.nextTick']);
