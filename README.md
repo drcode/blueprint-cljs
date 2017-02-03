@@ -15,11 +15,11 @@ Also, no attempt yet has been made to integrate this library with clojurescript'
 
 In your project.clj file, include the dependency `[org.clojars.drcode/blueprint-cljs "0.1.1"]`
 
-*Step 1: Make sure you are using Om with "Batteries Included"
+*Step 1: Make sure you are using Om with "Batteries Included"*
 
 Blueprintjs performs many animations, so you need the react addons, which means you should use Om with addons compiled in, which is the dependency `[org.omcljs/om "1.0.0-addonsalpha48-SNAPSHOT"]`
 
-Additionally, `blueprint-cljs` uses the (`om-tools` convention for attribute maps)[https://github.com/plumatic/om-tools#dom-tools], so you may want to use this library in the rest of your program as well, with the dependency `[prismatic/om-tools "0.4.0"]`.
+Additionally, `blueprint-cljs` uses the [`om-tools` convention for attribute maps](https://github.com/plumatic/om-tools#dom-tools), so you may want to use this library in the rest of your program as well, with the dependency `[prismatic/om-tools "0.4.0"]`.
 
 *Step 2: Include the css and the js in your index.html file*
 
