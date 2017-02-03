@@ -54,10 +54,26 @@ You should now see an extra-pretty Blueprintjs button in your app!
 
 ## Building the blueprintjs javascript bundle
 
+You'll need nodejs, npm, browserify, all that fun stuff. Then from the root directory run:
 
+```
+> npm install
+> sh build_blueprint.sh 
+```
 
+Unfortunately, though `blueprint-cljs` is fully functional when used as advised (short of advanced compilation support) it relies on one unfortunate hack, as well as two outright horrible hacks- These are detailed below.
 
-## Ugly hack 
+If someone is more competent than me at javascript build tools and clojurescript/javascript interop and wants to submit pull requests to help remove these that would be awesome!
 
+## Unfortunate Hack #1
 
+Blueprintjs has a dependency on the React and ReactDOM NPM packages. However, Om loads its own instance of React and React does not play nice when double loaded. Thanks to pointers from António Monteiro, I was able to use the "package excise" feature to surgically remove these packages from the final blueprint bundle.
+
+## Horrible Hack #1
+
+Of course, now that blueprintjs is missing React, it blows up when it initializes... it's not smart enough to "find" the version of react that was loaded via Om. I was able to fix this by including a `sed` command in the build script that wires in the correct references to React via manual search-and-replace against the final javascript bundle (sorry...)
+
+## Horrible Hack #2
+
+Another problem is that blueprintjs needs React to initialize, while blueprint-cljs needs blueprintjs to initialize... but each is in a separate js bundle, making either order of initializing the js bundles impossible. So how do we solve this dillema? Very easy, we explicitly initialize the javascript bundle right in the middle of the clojurescript bundle initialization! In `blueprint-cljs.core` you'll find a function call `(js/loadBlueprint)` that does exactly this. (Apologies again...)
 
