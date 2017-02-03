@@ -35,10 +35,14 @@
                                                 "A page with all Blueprintjs Components, rendered in Om"))
                               (dom/div {:class "pt-navbar-group pt-align-right"}
                                        (dom/a {:href "https://github.com/drcode/blueprint-cljs"}
-                                              (bp/button {:icon-name "home" :class "pt-minimal"
-                                                                                                             :intent (bp/intents :primary)} "Github"))
+                                              (bp/button {:icon-name "home"
+                                                          :class     "pt-minimal"
+                                                          :intent    (bp/intents :primary)}
+                                                         "Github"))
                                        (dom/a {:href "https://github.com/drcode/blueprint-cljs/blob/master/examples/kitchensink/src/kitchensink/core.cljs"}
-                                              (bp/button {:icon-name "pt-icon-document-open" :class "pt-minimal"} "Code for this page"))))
+                                              (bp/button {:icon-name "pt-icon-document-open"
+                                                          :class "pt-minimal"}
+                                                         "Code for this page"))))
                      (dom/div {:style {:display "flex"
                                        :justify-content "center"}}
                               (dom/div {:style {:width            "800px"
@@ -51,7 +55,8 @@
                                        (section "Click on things for animations & stuff. " (dom/i "This demo page is intended for desktop browsers only."))
 left-icon-name "refresh"
                                                                  :value "Text input with icons & stuff"
-                                                                 :right-element (bp/button {:intent (bp/intents :warning)} "Do It!")}))
+                                                                 :right-element (bp/button {:intent (bp/intents :warning)}
+                                                                                           "Do It!")}))
                                        (section (bp/menu (bp/menu-item {:icon-name "new-object" :text "Here's"})
                                                          (bp/menu-item {:icon-name "new-text-box" :text "A haiku that's"})
                                                          (bp/menu-item {:icon-name "new-link" :text "Written inside"})
@@ -62,7 +67,9 @@ left-icon-name "refresh"
                                                                      :visual "pt-icon-thumbs-down"}))
                                        (section (bp/popover {:content (dom/div (dom/p "Random stuff in here")
                                                                                (bp/button "A Button"))
-                                                             :popover-class-name "pt-popover-content-sizing"} (bp/button {:on-click (toggle :popover)} "Popover")))
+                                                             :popover-class-name "pt-popover-content-sizing"}
+                                                            (bp/button {:on-click (toggle :popover)}
+                                                                       "Popover")))
 
                                        (section (dom/p (bp/progress-bar {:value 0.8}))
                                                 (dom/p) (bp/spinner))
@@ -76,9 +83,12 @@ left-icon-name "refresh"
                                                             (dom/tr (dom/td "Stuff") (dom/td "In") (dom/td "A Table")))))
 
                                        (section (dom/p (bp/tag "Just"))
-                                                (dom/p (bp/tag {:intent (bp/intents :primary)} "Some"))
-                                                (dom/p (bp/tag {:on-remove (fn [])}  "Tags")))
-                                       (section (bp/tooltip {:content "This is very important text"} "Hover over me."))
+                                                (dom/p (bp/tag {:intent (bp/intents :primary)}
+                                                               "Some"))
+                                                (dom/p (bp/tag {:on-remove (fn [])}
+                                                               "Tags")))
+                                       (section (bp/tooltip {:content "This is very important text"}
+                                                            "Hover over me."))
 
                                        (section (bp/tree {:contents (bp/clj->tree-nodes [{:label "Foo"}
                                                                                          {:label       "Bar"
