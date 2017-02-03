@@ -73,7 +73,7 @@ Blueprintjs has a dependency on the React and ReactDOM NPM packages. However, Om
 
 ## Horrible Hack #1
 
-Of course, now that blueprintjs is missing React, it blows up when it initializes... it's not smart enough to "find" the version of react that was loaded via Om. I was able to fix this by including a `sed` command in the build script that wires in the correct references to React via manual search-and-replace against the final javascript bundle (sorry...)
+Of course, now that blueprintjs is missing React, it blows up when it initializes... it's not smart enough to "find" the version of react that was loaded via Om. There is a library called `browserify-shim` that exists specifically to address this problem, but I was not able to get it to work. Instead, I was able to fix this by including a `sed` command in the build script that wires in the correct references to React via manual search-and-replace against the final javascript bundle (sorry...)
 
 ## Horrible Hack #2
 
