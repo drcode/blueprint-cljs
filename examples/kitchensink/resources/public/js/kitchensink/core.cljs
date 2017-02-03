@@ -34,9 +34,12 @@
                                        (dom/div {:class "pt-navbar-heading"}
                                                 "A page with all Blueprintjs Components, rendered in Om"))
                               (dom/div {:class "pt-navbar-group pt-align-right"}
-                                       (dom/a {:href "https://github.com/drcode/blueprint-cljs"} (bp/button {:icon-name "home" :class "pt-minimal"
-                                                                                                             :intent (bp/intents :primary)} "Github"))
-                                       (dom/a {:href "https://github.com/drcode/blueprint-cljs/blob/master/examples/kitchensink/src/kitchensink/core.cljs"} (bp/button {:icon-name "pt-icon-document-open" :class "pt-minimal"} "Code for this page"))))
+                                       (dom/a {:href "https://github.com/drcode/blueprint-cljs"}
+                                              (bp/button {:icon-name "home" :class "pt-minimal"
+                                                          :intent (bp/intents :primary)}
+                                                         "Github"))
+                                       (dom/a {:href "https://github.com/drcode/blueprint-cljs/blob/master/examples/kitchensink/src/kitchensink/core.cljs"}
+                                              (bp/button {:icon-name "pt-icon-document-open" :class "pt-minimal"} "Code for this page"))))
                      (dom/div {:style {:display "flex"
                                        :justify-content "center"}}
                               (dom/div {:style {:width            "800px"
@@ -47,7 +50,8 @@
 
                                        
                                        (section "Click on things for animations & stuff. " (dom/i "This demo page is intended for desktop browsers only."))
-                                       (section (bp/switch {:on-click (toggle :dark)} "Turn off the lights!"))
+                                       (section (bp/switch {:on-click (toggle :dark)}
+                                                           "Turn off the lights!"))
                                        
                                        (section (bp/button {:on-click (toggle :alert)}
                                                            "Open Alert"))
@@ -61,7 +65,8 @@
 
                                        (section (bp/button {:on-click (fn []
                                                                         (.show my-toaster #js {:intent (:danger bp/intents)
-                                                                                               :message "This is a very dangerous button. Do not press it again." } ))} "Toast (Press multiple times)"))
+                                                                                               :message "This is a very dangerous button. Do not press it again." }))}
+                                                           "Toast (Press multiple times)"))
                                        
                                        (section (bp/button {:on-click (toggle :dialog)}
                                                            "Show Dialog"))
@@ -83,12 +88,14 @@
                                                            (dom/p (dom/input {:class "pt-input" :placeholder "foo"})))
                                                   (dom/div {:class "pt-dialog-footer"}
                                                            (dom/div {:class "pt-dialog-footer-actions"}
-                                                                    (bp/button {:intent (bp/intents :primary)} "Submit")
+                                                                    (bp/button {:intent (bp/intents :primary)}
+                                                                               "Submit")
                                                                     (bp/button "Nothing"))))
                                        (section (bp/button {:on-click #(.show  bp/context-menu
                                                                                (bp/menu (bp/menu-item {:text "One Item"})
                                                                                         (bp/menu-item {:text "Another Item"}))
-                                                                               #js {:left 100 :top 300})} "Show context menu"))
+                                                                               #js {:left 100 :top 300})}
+                                                           "Show context menu"))
 
                                        (section {:class "pt-breadcrumbs"}
                                                 (dom/li (bp/breadcrumb {:text "Crumb1"}))
@@ -96,12 +103,16 @@
                                                 (dom/li (bp/breadcrumb {:text "Crumb3"})))
 
 
-                                       (section (dom/p (bp/button {:intent (bp/intents :primary)} "I'm Primary"))
-                                                (dom/p (bp/button {:intent (bp/intents :danger)} "Danger!"))
-                                                (dom/p (bp/button {:icon-name "refresh"} "I've got an icon")))
+                                       (section (dom/p (bp/button {:intent (bp/intents :primary)}
+                                                                  "I'm Primary"))
+                                                (dom/p (bp/button {:intent (bp/intents :danger)}
+                                                                  "Danger!"))
+                                                (dom/p (bp/button {:icon-name "refresh"}
+                                                                  "I've got an icon")))
                                        
                                        (section {:class "pt-button-group"}
-                                                (bp/button {:intent (bp/intents :success)} "Buttons") (bp/button "in a") (bp/button "group"))
+                                                (bp/button {:intent (bp/intents :success)}
+                                                           "Buttons") (bp/button "in a") (bp/button "group"))
 
                                        (section {:class "pt-callout pt-intent-danger"}
                                                 (dom/h5 "Warning")
@@ -110,7 +121,8 @@
                                        (section (dom/div {:class "pt-card pt-elevation-3"}
                                                          "Look at me! I'm floating!"))
 
-                                       (section (bp/button {:on-click (toggle :collapse)} "Collapse")
+                                       (section (bp/button {:on-click (toggle :collapse)}
+                                                           "Collapse")
                                                 (bp/collapse {:is-open (enabled? :collapse)}
                                                              "This is the text that will collapse"))
 
@@ -123,7 +135,8 @@
                                                                       :visible-item-count  (:slider (om/get-state this))
                                                                       :dropdown-target     (dom/span {:class "pt-breadcrumbs-collapsed"})
                                                                       :render-visible-item (fn [props]
-                                                                                             (dom/span {:class "pt-breadcrumb"} (.-text props)))}
+                                                                                             (dom/span {:class "pt-breadcrumb"}
+                                                                                                       (.-text props)))}
                                                                      (bp/menu-item {:text "These"})
                                                                      (bp/menu-item {:text "Words"})
                                                                      (bp/menu-item {:text "Can"})
@@ -152,7 +165,8 @@
 
                                        (section (bp/input-group {:left-icon-name "refresh"
                                                                  :value "Text input with icons & stuff"
-                                                                 :right-element (bp/button {:intent (bp/intents :warning)} "Do It!")}))
+                                                                 :right-element (bp/button {:intent (bp/intents :warning)}
+                                                                                           "Do It!")}))
                                        (section (bp/menu (bp/menu-item {:icon-name "new-object" :text "Here's"})
                                                          (bp/menu-item {:icon-name "new-text-box" :text "A haiku that's"})
                                                          (bp/menu-item {:icon-name "new-link" :text "Written inside"})
@@ -163,7 +177,9 @@
                                                                      :visual "pt-icon-thumbs-down"}))
                                        (section (bp/popover {:content (dom/div (dom/p "Random stuff in here")
                                                                                (bp/button "A Button"))
-                                                             :popover-class-name "pt-popover-content-sizing"} (bp/button {:on-click (toggle :popover)} "Popover")))
+                                                             :popover-class-name "pt-popover-content-sizing"}
+                                                            (bp/button {:on-click (toggle :popover)}
+                                                                       "Popover")))
 
                                        (section (dom/p (bp/progress-bar {:value 0.8}))
                                                 (dom/p) (bp/spinner))
@@ -177,9 +193,12 @@
                                                             (dom/tr (dom/td "Stuff") (dom/td "In") (dom/td "A Table")))))
 
                                        (section (dom/p (bp/tag "Just"))
-                                                (dom/p (bp/tag {:intent (bp/intents :primary)} "Some"))
-                                                (dom/p (bp/tag {:on-remove (fn [])}  "Tags")))
-                                       (section (bp/tooltip {:content "This is very important text"} "Hover over me."))
+                                                (dom/p (bp/tag {:intent (bp/intents :primary)}
+                                                               "Some"))
+                                                (dom/p (bp/tag {:on-remove (fn [])}
+                                                               "Tags")))
+                                       (section (bp/tooltip {:content "This is very important text"}
+                                                            "Hover over me."))
 
                                        (section (bp/tree {:contents (bp/clj->tree-nodes [{:label "Foo"}
                                                                                          {:label "Bar"
