@@ -34,9 +34,11 @@
                                        (dom/div {:class "pt-navbar-heading"}
                                                 "A page with all Blueprintjs Components, rendered in Om"))
                               (dom/div {:class "pt-navbar-group pt-align-right"}
-                                       (dom/a {:href "https://github.com/drcode/blueprint-cljs"} (bp/button {:icon-name "home" :class "pt-minimal"
+                                       (dom/a {:href "https://github.com/drcode/blueprint-cljs"}
+                                              (bp/button {:icon-name "home" :class "pt-minimal"
                                                                                                              :intent (bp/intents :primary)} "Github"))
-                                       (dom/a {:href "https://github.com/drcode/blueprint-cljs/blob/master/examples/kitchensink/src/kitchensink/core.cljs"} (bp/button {:icon-name "pt-icon-document-open" :class "pt-minimal"} "Code for this page"))))
+                                       (dom/a {:href "https://github.com/drcode/blueprint-cljs/blob/master/examples/kitchensink/src/kitchensink/core.cljs"}
+                                              (bp/button {:icon-name "pt-icon-document-open" :class "pt-minimal"} "Code for this page"))))
                      (dom/div {:style {:display "flex"
                                        :justify-content "center"}}
                               (dom/div {:style {:width            "800px"
