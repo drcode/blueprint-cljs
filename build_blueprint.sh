@@ -1,0 +1,2 @@
+browserify ./src/js/main.js -x react -x react-dom -x react-addons-css-transition-group -o blueprint_bundle.js
+sed -i '.bak' 's/;var f=new Error("Cannot find module/;if\(o==\"react\"\)return window\[\"React\"\];if\(o==\"react-dom\"\)return window\[\"ReactDOM\"\];if\(o==\"react-addons-css-transition-group\"\)return window\[\"React\"\].addons.CSSTransitionGroup;var f=new Error("Cannot find module/g' blueprint_bundle.js

@@ -1,0 +1,29 @@
+{
+  "name": "etherean",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@blueprintjs/core": "^1.4.0",
+    "react": "15.3.1",
+    "react-addons-css-transition-group": "15.3.1",
+    "react-dom": "15.3.1",
+    "react-player": "0.7.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack -d --watch",
+    "build": "webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drcode/blueprint-cljs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": ""
+}
