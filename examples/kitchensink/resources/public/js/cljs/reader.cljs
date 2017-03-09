@@ -224,22 +224,18 @@ nil if the end of stream has been reached")
 
 (defn read-delimited-list
   [delim rdr recursive?]
-  (loop [a (array)]
+  (loop [a (transient [])]
     (let [ch (read-past whitespace? rdr)]
       (when-not ch (reader-error rdr "EOF while reading"))
       (if (identical? delim ch)
-        a
+        (persistent! a)
         (if-let [macrofn (macros ch)]
           (let [mret (macrofn rdr ch)]
-            (recur (if (identical? mret rdr) a (do
-                                                 (.push a mret)
-                                                 a))))
+            (recur (if (identical? mret rdr) a (conj! a mret))))
           (do
             (unread rdr ch)
             (let [o (read rdr true nil recursive?)]
-              (recur (if (identical? o rdr) a (do
-                                                (.push a o)
-                                                a))))))))))
+              (recur (if (identical? o rdr) a (conj! a o))))))))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; data structure readers
@@ -267,27 +263,20 @@ nil if the end of stream has been reached")
 
 (defn read-list
   [rdr _]
-  (let [arr (read-delimited-list ")" rdr true)]
-    (loop [i (alength arr) ^not-native r ()]
-      (if (> i 0)
-        (recur (dec i) (-conj r (aget arr (dec i))))
-        r))))
+  (apply list (read-delimited-list ")" rdr true)))
 
 (def read-comment skip-line)
 
 (defn read-vector
   [rdr _]
-  (vec (read-delimited-list "]" rdr true)))
+  (read-delimited-list "]" rdr true))
 
 (defn read-map
   [rdr _]
-  (let [l (read-delimited-list "}" rdr true)
-        c (alength l)]
-    (when (odd? c)
+  (let [l (read-delimited-list "}" rdr true)]
+    (when (odd? (count l))
       (reader-error rdr "Map literal must contain an even number of forms"))
-    (if (<= c (* 2 (.-HASHMAP-THRESHOLD PersistentArrayMap)))
-      (.fromArray PersistentArrayMap l true true)
-      (.fromArray PersistentHashMap l true))))
+    (apply hash-map l)))
 
 (defn read-number
   [reader initch]
@@ -406,7 +395,7 @@ nil if the end of stream has been reached")
 
 (defn read-set
   [rdr _]
-  (.fromArray PersistentHashSet (read-delimited-list "}" rdr true) true))
+  (set (read-delimited-list "}" rdr true)))
 
 (defn read-regex
   [rdr ch]
